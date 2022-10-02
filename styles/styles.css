@@ -17,8 +17,9 @@
   --border-color: #ececec;
   --team-background-color: #f5f4fa;
   --clients-background-color: #f5f5f5;
+  --active-icon-background-color: #d9d9d9;
   --gap: 30px;
-  --team-soc-icon-fill: #afb1b8;
+  --icon-fill: #afb1b8;
 }
 
 body {
@@ -207,6 +208,7 @@ body {
 
 .team-item-text {
   text-align: center;
+  margin-bottom: 16px;
 
   color: var(--text-color);
 
@@ -214,15 +216,17 @@ body {
   line-height: 1.18;
 }
 
-.team-soc-list {
-  margin-top: 16px;
-
+.team-soc-list,
+.clients-list,
+.footer-social-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.team-soc-link {
+.team-soc-link,
+.clients-link,
+.footer-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,7 +235,7 @@ body {
   height: 44px;
   border-radius: 50%;
 
-  fill: var(--team-soc-icon-fill);
+  fill: var(--icon-fill);
 }
 
 .team-soc-link:hover,
@@ -275,9 +279,29 @@ body {
 }
 
 .clients-list {
-  display: flex;
-  justify-content: center;
   gap: var(--gap);
+}
+
+.clients-link {
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--icon-fill);
+  border-radius: 4px;
+
+  color: var(--icon-fill);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+.clients-icon {
+  fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  /* background-color: var(--active-icon-background-color); */
+  border-color: var(--active-link-color);
+  color: var(--active-link-color);
 }
 
 /*------------footer----------*/
@@ -335,7 +359,7 @@ body {
   color: var(--studio-footer-color);
 }
 
-.social-title {
+.footer-social-title {
   margin-bottom: 20px;
 
   font-size: 14px;
@@ -344,12 +368,24 @@ body {
   text-transform: uppercase;
 }
 
-.social-list {
+.footer-social-list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
+
+.footer-social-link {
+  /* background-color: tomato; */
+  fill: var(--icon-fill);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--active-btn-background-color);
+  fill: var(--active-btn-color);
+}
+
 /*--------------portfolio------------*/
 
 .filter-list {
