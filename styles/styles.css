@@ -35,10 +35,13 @@ body {
 
 /*------------------------header-------------------*/
 
+.header {
+  border-bottom: 1px solid var(--border-color);
+}
+
 .header > .container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--border-color);
 }
 
 .header-logo {
@@ -355,8 +358,6 @@ body {
 
   font-style: normal;
   line-height: 1.71;
-
-  text-decoration: none;
 }
 
 .address {
@@ -365,7 +366,7 @@ body {
 
 .social {
   margin-right: auto;
-  padding-top: 12px;
+
   color: var(--studio-footer-color);
 }
 
